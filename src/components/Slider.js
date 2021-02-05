@@ -51,6 +51,11 @@ export default class Slider extends Component {
     return window.innerWidth;
   };
 
+  // Autoplay
+  // componentDidMount() {
+  //   setInterval(this.nextSlide, 3000);
+  // }
+
   render() {
     const { translate, transition } = this.state;
 
