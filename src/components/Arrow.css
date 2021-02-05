@@ -1,0 +1,19 @@
+.arrow {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+.arrow-image:focus {
+  outline: 0;
+}
