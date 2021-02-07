@@ -4,7 +4,7 @@ import "./Slider.css";
 import Slide from "./Slide";
 import Arrow from "./Arrow";
 
-// Testing git ssh
+// Testing if git ssh passphrase is needed
 export default class Slider extends Component {
   state = {
     activeSlide: 0,
