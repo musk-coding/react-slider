@@ -6,43 +6,43 @@ import Arrow from "./Arrow";
 
 export default class Slider extends Component {
   state = {
-    activeIndex: 0,
+    activeSlide: 0,
     translate: 0,
     transition: 0.45,
   };
 
   nextSlide = () => {
-    if (this.state.activeIndex === this.props.slides.length - 1) {
+    if (this.state.activeSlide === this.props.slides.length - 1) {
       return this.setState({
         ...this.state,
         translate: 0,
-        activeIndex: 0,
+        activeSlide: 0,
         transition: 0,
       });
     }
 
     this.setState({
       ...this.state,
-      activeIndex: this.state.activeIndex + 1,
-      translate: (this.state.activeIndex + 1) * this.getWidth(),
+      activeSlide: this.state.activeSlide + 1,
+      translate: (this.state.activeSlide + 1) * this.getWidth(),
       transition: 0.45,
     });
   };
 
   prevSlide = () => {
-    if (this.state.activeIndex === 0) {
+    if (this.state.activeSlide === 0) {
       return this.setState({
         ...this.state,
         translate: (this.props.slides.length - 1) * this.getWidth(),
-        activeIndex: this.props.slides.length - 1,
+        activeSlide: this.props.slides.length - 1,
         transition: 0,
       });
     }
 
     this.setState({
       ...this.state,
-      activeIndex: this.state.activeIndex - 1,
-      translate: (this.state.activeIndex - 1) * this.getWidth(),
+      activeSlide: this.state.activeSlide - 1,
+      translate: (this.state.activeSlide - 1) * this.getWidth(),
       transition: 0.45,
     });
   };
