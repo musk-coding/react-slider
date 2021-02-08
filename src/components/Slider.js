@@ -12,6 +12,18 @@ export default class Slider extends Component {
     transition: 0.45,
   };
 
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({
+      ...this.state,
+      translate: this.state.activeSlide * this.getWidth(),
+      transition: 0,
+    });
+  };
+
   nextSlide = () => {
     if (this.state.activeSlide === this.props.slides.length - 1) {
       return this.setState({
